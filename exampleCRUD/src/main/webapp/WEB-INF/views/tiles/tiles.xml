@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE tiles-definitions PUBLIC  
+      "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"  
+      "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">  
+<tiles-definitions>
+
+	<!-- Home layout Define -->
+   <definition name="home.layout.definition"
+       template="/WEB-INF/views/common/layouts/home-layout.jsp">
+       <put-attribute name="title" value="Homepage" />
+       <put-attribute name="header" value="/WEB-INF/views/common/home-header-fragment.jsp"/>
+   </definition>
+ 
+   <!-- Employee layout Define -->
+   <definition name="employee.layout.definition"
+       template="/WEB-INF/views/common/layouts/employee-layout.jsp">
+       <put-attribute name="title" value="" />
+       <put-attribute name="head-fragment" value="/WEB-INF/views/common/head-fragment.jsp" />
+       <put-attribute name="header" value="/WEB-INF/views/common/header-fragment.jsp"/>
+       <put-attribute name="body" value="" />
+       <put-attribute name="footer" value="/WEB-INF/views/common/footer-fragment.jsp" />
+       <put-attribute name="foot-fragment" value="/WEB-INF/views/common/foot-fragment.jsp" />
+   </definition>
+   
+   <definition name="homepage" extends="home.layout.definition">
+       <put-attribute name="header" value="/WEB-INF/views/common/header-fragment.jsp"/>
+   </definition>
+      
+   <!-- Create new employee Page -->
+   <definition name="createNewEmployeePage" extends="employee.layout.definition">
+       <put-attribute name="title" value="Create new employee" />
+       <put-attribute name="body" value="/WEB-INF/views/body-fragment/employee/create-employee-fragment.jsp" />
+   </definition>
+   
+   <!-- List all employee Page -->
+   <definition name="listEmployeePage" extends="employee.layout.definition">
+       <put-attribute name="title" value="List employee" />
+       <put-attribute name="header" value="/WEB-INF/views/common/header-fragment2.jsp"/>
+       <put-attribute name="body" value="/WEB-INF/views/body-fragment/employee/list-employee-fragment.jsp" />
+   </definition>
+   
+   <!-- 403 page -->
+   <definition name="403Page"
+       template="/WEB-INF/views/specific/403page.jsp">
+   </definition>
+   
+   <!-- LoggedIn page -->
+   <definition name="currentLogginInPage"
+       template="/WEB-INF/views/specific/currentLoggedInPage.jsp">
+   </definition>
+   
+   <!-- test page -->
+   <definition name="test"
+       template="/WEB-INF/views/specific/test.jsp">
+   </definition>
+   
+   <!-- test2 page -->
+   <definition name="test2"
+       template="/WEB-INF/views/specific/test2.jsp">
+   </definition>
+   
+ 
+</tiles-definitions>
